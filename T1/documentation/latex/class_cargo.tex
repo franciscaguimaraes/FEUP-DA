@@ -1,0 +1,211 @@
+\hypertarget{class_cargo}{}\doxysection{Cargo Class Reference}
+\label{class_cargo}\index{Cargo@{Cargo}}
+
+
+{\ttfamily \#include $<$Cargo.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cargo_a941cca3625f7c418184726bde5e6be96}{Cargo}} (unsigned max\+Volume, unsigned max\+Weight, unsigned cost, unsigned time)
+\item 
+unsigned \mbox{\hyperlink{class_cargo_ae40259f77613a26a165ad352ac73a127}{get\+Max\+Volume}} () const
+\item 
+unsigned \mbox{\hyperlink{class_cargo_a29b2a3f40609a2ee238f63ed2de372f4}{get\+Current\+Volume}} () const
+\item 
+unsigned \mbox{\hyperlink{class_cargo_aab7d676b0bdc8965a3f4d5d89e7528e1}{get\+Max\+Weight}} () const
+\item 
+unsigned \mbox{\hyperlink{class_cargo_a0f98db1ce97a0bb98c72d1ad6b2195b9}{get\+Current\+Weight}} () const
+\item 
+int \mbox{\hyperlink{class_cargo_a9a24f7bbccfb2a5edbfb4ec29fd0eb90}{get\+Profit}} () const
+\item 
+void \mbox{\hyperlink{class_cargo_a2fd8db6a5159ee0aabb15311fd2f3fc6}{set\+Current\+Volume}} (unsigned volume)
+\item 
+void \mbox{\hyperlink{class_cargo_a4127ca9f8968c9c3e4526a9d0080bc36}{set\+Current\+Weight}} (unsigned weight)
+\item 
+void \mbox{\hyperlink{class_cargo_a68c7421a98bc881d6be520f4816b72e6}{set\+Profit}} (int value)
+\item 
+bool \mbox{\hyperlink{class_cargo_a600d33370be2f6e1574bc059244d8a0d}{can\+Fit}} (const \mbox{\hyperlink{class_order}{Order}} $\ast$\mbox{\hyperlink{class_order}{Order}}) const
+\item 
+void \mbox{\hyperlink{class_cargo_a8acb459bfb473ca07cc6fef968841ee3}{push\+Orders}} (\mbox{\hyperlink{class_order}{Order}} $\ast$orders)
+\item 
+vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ \& \mbox{\hyperlink{class_cargo_a300a356c5f875138a2b74d2f3951dddd}{get\+Orders}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_cargo_a1e38211d814ce71f68be54c6f96c7a6d}{get\+Current\+Time}} () const
+\item 
+void \mbox{\hyperlink{class_cargo_a8a005b52acd404a2e4cacbc91417e5e8}{set\+Current\+Time}} (unsigned int time)
+\item 
+unsigned int \mbox{\hyperlink{class_cargo_ae67ba4997859c73b0e9070c0804675a7}{get\+Max\+Time}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents what each \mbox{\hyperlink{class_truck}{Truck}} is carrying (cargo) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cargo_a941cca3625f7c418184726bde5e6be96}\label{class_cargo_a941cca3625f7c418184726bde5e6be96}} 
+\index{Cargo@{Cargo}!Cargo@{Cargo}}
+\index{Cargo@{Cargo}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{Cargo()}{Cargo()}}
+{\footnotesize\ttfamily Cargo\+::\+Cargo (\begin{DoxyParamCaption}\item[{unsigned}]{max\+Volume,  }\item[{unsigned}]{max\+Weight,  }\item[{unsigned}]{cost,  }\item[{unsigned}]{time }\end{DoxyParamCaption})}
+
+Class constructor with 4 unsigned objects 
+\begin{DoxyParams}{Parameters}
+{\em max\+Volume} & maximum supported volume \\
+\hline
+{\em max\+Weight} & maximum supported weight \\
+\hline
+{\em cost} & ost of transportation \\
+\hline
+{\em time} & company\textquotesingle{}s working hours \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cargo_a600d33370be2f6e1574bc059244d8a0d}\label{class_cargo_a600d33370be2f6e1574bc059244d8a0d}} 
+\index{Cargo@{Cargo}!canFit@{canFit}}
+\index{canFit@{canFit}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{canFit()}{canFit()}}
+{\footnotesize\ttfamily bool Cargo\+::can\+Fit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_order}{Order}} $\ast$}]{Order }\end{DoxyParamCaption}) const}
+
+returns true or false if order can fit in truck\textquotesingle{}s cargo 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_order}{Order}}} & pointer to order \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_cargo_a1e38211d814ce71f68be54c6f96c7a6d}\label{class_cargo_a1e38211d814ce71f68be54c6f96c7a6d}} 
+\index{Cargo@{Cargo}!getCurrentTime@{getCurrentTime}}
+\index{getCurrentTime@{getCurrentTime}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{getCurrentTime()}{getCurrentTime()}}
+{\footnotesize\ttfamily unsigned int Cargo\+::get\+Current\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+returns current duration of orders in cargo \begin{DoxyReturn}{Returns}
+time of current cargo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_cargo_a29b2a3f40609a2ee238f63ed2de372f4}\label{class_cargo_a29b2a3f40609a2ee238f63ed2de372f4}} 
+\index{Cargo@{Cargo}!getCurrentVolume@{getCurrentVolume}}
+\index{getCurrentVolume@{getCurrentVolume}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{getCurrentVolume()}{getCurrentVolume()}}
+{\footnotesize\ttfamily unsigned Cargo\+::get\+Current\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+returns current volume \begin{DoxyReturn}{Returns}
+current volume 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_cargo_a0f98db1ce97a0bb98c72d1ad6b2195b9}\label{class_cargo_a0f98db1ce97a0bb98c72d1ad6b2195b9}} 
+\index{Cargo@{Cargo}!getCurrentWeight@{getCurrentWeight}}
+\index{getCurrentWeight@{getCurrentWeight}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{getCurrentWeight()}{getCurrentWeight()}}
+{\footnotesize\ttfamily unsigned Cargo\+::get\+Current\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+returns current weight \begin{DoxyReturn}{Returns}
+current weight 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_cargo_ae67ba4997859c73b0e9070c0804675a7}\label{class_cargo_ae67ba4997859c73b0e9070c0804675a7}} 
+\index{Cargo@{Cargo}!getMaxTime@{getMaxTime}}
+\index{getMaxTime@{getMaxTime}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{getMaxTime()}{getMaxTime()}}
+{\footnotesize\ttfamily unsigned int Cargo\+::get\+Max\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+returns maximum time of cargo \begin{DoxyReturn}{Returns}
+maximum time 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_cargo_ae40259f77613a26a165ad352ac73a127}\label{class_cargo_ae40259f77613a26a165ad352ac73a127}} 
+\index{Cargo@{Cargo}!getMaxVolume@{getMaxVolume}}
+\index{getMaxVolume@{getMaxVolume}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{getMaxVolume()}{getMaxVolume()}}
+{\footnotesize\ttfamily unsigned Cargo\+::get\+Max\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+returns maximum volume supported \begin{DoxyReturn}{Returns}
+max\+Volume parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_cargo_aab7d676b0bdc8965a3f4d5d89e7528e1}\label{class_cargo_aab7d676b0bdc8965a3f4d5d89e7528e1}} 
+\index{Cargo@{Cargo}!getMaxWeight@{getMaxWeight}}
+\index{getMaxWeight@{getMaxWeight}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{getMaxWeight()}{getMaxWeight()}}
+{\footnotesize\ttfamily unsigned Cargo\+::get\+Max\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+returns maximum weight supported \begin{DoxyReturn}{Returns}
+max\+Weight parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_cargo_a300a356c5f875138a2b74d2f3951dddd}\label{class_cargo_a300a356c5f875138a2b74d2f3951dddd}} 
+\index{Cargo@{Cargo}!getOrders@{getOrders}}
+\index{getOrders@{getOrders}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{getOrders()}{getOrders()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ \& Cargo\+::get\+Orders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+returns orders\textquotesingle{} vector \begin{DoxyReturn}{Returns}
+orders vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_cargo_a9a24f7bbccfb2a5edbfb4ec29fd0eb90}\label{class_cargo_a9a24f7bbccfb2a5edbfb4ec29fd0eb90}} 
+\index{Cargo@{Cargo}!getProfit@{getProfit}}
+\index{getProfit@{getProfit}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{getProfit()}{getProfit()}}
+{\footnotesize\ttfamily int Cargo\+::get\+Profit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+returns cargo profit \begin{DoxyReturn}{Returns}
+cargo profit 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_cargo_a8acb459bfb473ca07cc6fef968841ee3}\label{class_cargo_a8acb459bfb473ca07cc6fef968841ee3}} 
+\index{Cargo@{Cargo}!pushOrders@{pushOrders}}
+\index{pushOrders@{pushOrders}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{pushOrders()}{pushOrders()}}
+{\footnotesize\ttfamily void Cargo\+::push\+Orders (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_order}{Order}} $\ast$}]{orders }\end{DoxyParamCaption})}
+
+adds an order to the current orders\textquotesingle{} vector updating each parameter along the way 
+\begin{DoxyParams}{Parameters}
+{\em orders} & pointer to orders \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cargo_a8a005b52acd404a2e4cacbc91417e5e8}\label{class_cargo_a8a005b52acd404a2e4cacbc91417e5e8}} 
+\index{Cargo@{Cargo}!setCurrentTime@{setCurrentTime}}
+\index{setCurrentTime@{setCurrentTime}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{setCurrentTime()}{setCurrentTime()}}
+{\footnotesize\ttfamily void Cargo\+::set\+Current\+Time (\begin{DoxyParamCaption}\item[{unsigned int}]{time }\end{DoxyParamCaption})}
+
+updates the current duration of orders in cargo 
+\begin{DoxyParams}{Parameters}
+{\em time} & updates cargo time \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cargo_a2fd8db6a5159ee0aabb15311fd2f3fc6}\label{class_cargo_a2fd8db6a5159ee0aabb15311fd2f3fc6}} 
+\index{Cargo@{Cargo}!setCurrentVolume@{setCurrentVolume}}
+\index{setCurrentVolume@{setCurrentVolume}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{setCurrentVolume()}{setCurrentVolume()}}
+{\footnotesize\ttfamily void Cargo\+::set\+Current\+Volume (\begin{DoxyParamCaption}\item[{unsigned}]{volume }\end{DoxyParamCaption})}
+
+updates current volume 
+\begin{DoxyParams}{Parameters}
+{\em volume} & value to update volume with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cargo_a4127ca9f8968c9c3e4526a9d0080bc36}\label{class_cargo_a4127ca9f8968c9c3e4526a9d0080bc36}} 
+\index{Cargo@{Cargo}!setCurrentWeight@{setCurrentWeight}}
+\index{setCurrentWeight@{setCurrentWeight}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{setCurrentWeight()}{setCurrentWeight()}}
+{\footnotesize\ttfamily void Cargo\+::set\+Current\+Weight (\begin{DoxyParamCaption}\item[{unsigned}]{weight }\end{DoxyParamCaption})}
+
+updates current weight 
+\begin{DoxyParams}{Parameters}
+{\em weight} & value to update weight with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cargo_a68c7421a98bc881d6be520f4816b72e6}\label{class_cargo_a68c7421a98bc881d6be520f4816b72e6}} 
+\index{Cargo@{Cargo}!setProfit@{setProfit}}
+\index{setProfit@{setProfit}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{setProfit()}{setProfit()}}
+{\footnotesize\ttfamily void Cargo\+::set\+Profit (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+updates current profit 
+\begin{DoxyParams}{Parameters}
+{\em value} & value to update profit with \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Cargo.\+h\end{DoxyCompactItemize}

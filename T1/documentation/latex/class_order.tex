@@ -1,0 +1,118 @@
+\hypertarget{class_order}{}\doxysection{Order Class Reference}
+\label{class_order}\index{Order@{Order}}
+
+
+{\ttfamily \#include $<$Order.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_order_a1640a83a2c27557d37c18a96f1826841}{Order}} (unsigned volume, unsigned weight, unsigned reward, unsigned duration)
+\item 
+\mbox{\hyperlink{class_order_a8fb25876ccbd534465f5f96ef9bb2212}{$\sim$\+Order}} ()
+\item 
+unsigned \mbox{\hyperlink{class_order_a43678ea95cc2cf4d78cfb0632c179c4e}{get\+Volume}} () const
+\item 
+unsigned \mbox{\hyperlink{class_order_ae211e7348c7999de9fc9600a977ade59}{get\+Weight}} () const
+\item 
+unsigned \mbox{\hyperlink{class_order_af206dcb450cac138f949b19b7d54e101}{get\+Reward}} () const
+\item 
+unsigned \mbox{\hyperlink{class_order_a04a5daefa6d0dc81ae74cf854ef2a415}{get\+Duration}} () const
+\item 
+bool \mbox{\hyperlink{class_order_a3f50d95401297eef7792f4accd9b78b0}{get\+Assigned\+Value}} () const
+\item 
+void \mbox{\hyperlink{class_order_a6c65975606699e5305160cec932687e6}{set\+Assigned\+Value}} (bool value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents the clients\textquotesingle{} orders in this project. Orders are represented by a volume, weight, reward and delivery duration. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_order_a1640a83a2c27557d37c18a96f1826841}\label{class_order_a1640a83a2c27557d37c18a96f1826841}} 
+\index{Order@{Order}!Order@{Order}}
+\index{Order@{Order}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{Order()}{Order()}}
+{\footnotesize\ttfamily Order\+::\+Order (\begin{DoxyParamCaption}\item[{unsigned}]{volume,  }\item[{unsigned}]{weight,  }\item[{unsigned}]{reward,  }\item[{unsigned}]{duration }\end{DoxyParamCaption})}
+
+Class constructor with 3 unsigned objects 
+\begin{DoxyParams}{Parameters}
+{\em volume} & Orders\textquotesingle{} volume \\
+\hline
+{\em weight} & Orders\textquotesingle{} weight \\
+\hline
+{\em reward} & Orders\textquotesingle{} reward \\
+\hline
+{\em duration} & Orders\textquotesingle{} duration \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_order_a8fb25876ccbd534465f5f96ef9bb2212}\label{class_order_a8fb25876ccbd534465f5f96ef9bb2212}} 
+\index{Order@{Order}!````~Order@{$\sim$Order}}
+\index{````~Order@{$\sim$Order}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{$\sim$Order()}{~Order()}}
+{\footnotesize\ttfamily Order\+::$\sim$\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Class destructor to clear the object in memory 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_order_a3f50d95401297eef7792f4accd9b78b0}\label{class_order_a3f50d95401297eef7792f4accd9b78b0}} 
+\index{Order@{Order}!getAssignedValue@{getAssignedValue}}
+\index{getAssignedValue@{getAssignedValue}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{getAssignedValue()}{getAssignedValue()}}
+{\footnotesize\ttfamily bool Order\+::get\+Assigned\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns assigned value. If order has been processed (true) or not (false) \begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_order_a04a5daefa6d0dc81ae74cf854ef2a415}\label{class_order_a04a5daefa6d0dc81ae74cf854ef2a415}} 
+\index{Order@{Order}!getDuration@{getDuration}}
+\index{getDuration@{getDuration}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{getDuration()}{getDuration()}}
+{\footnotesize\ttfamily unsigned Order\+::get\+Duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns orders\textquotesingle{} duration \begin{DoxyReturn}{Returns}
+Duration parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_order_af206dcb450cac138f949b19b7d54e101}\label{class_order_af206dcb450cac138f949b19b7d54e101}} 
+\index{Order@{Order}!getReward@{getReward}}
+\index{getReward@{getReward}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{getReward()}{getReward()}}
+{\footnotesize\ttfamily unsigned Order\+::get\+Reward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns orders\textquotesingle{} reward \begin{DoxyReturn}{Returns}
+Reward parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_order_a43678ea95cc2cf4d78cfb0632c179c4e}\label{class_order_a43678ea95cc2cf4d78cfb0632c179c4e}} 
+\index{Order@{Order}!getVolume@{getVolume}}
+\index{getVolume@{getVolume}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{getVolume()}{getVolume()}}
+{\footnotesize\ttfamily unsigned Order\+::get\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns orders\textquotesingle{} volume \begin{DoxyReturn}{Returns}
+Volume parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_order_ae211e7348c7999de9fc9600a977ade59}\label{class_order_ae211e7348c7999de9fc9600a977ade59}} 
+\index{Order@{Order}!getWeight@{getWeight}}
+\index{getWeight@{getWeight}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{getWeight()}{getWeight()}}
+{\footnotesize\ttfamily unsigned Order\+::get\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns orders\textquotesingle{} weight \begin{DoxyReturn}{Returns}
+Weight parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_order_a6c65975606699e5305160cec932687e6}\label{class_order_a6c65975606699e5305160cec932687e6}} 
+\index{Order@{Order}!setAssignedValue@{setAssignedValue}}
+\index{setAssignedValue@{setAssignedValue}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{setAssignedValue()}{setAssignedValue()}}
+{\footnotesize\ttfamily void Order\+::set\+Assigned\+Value (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+Updated assigned value to true or false if order has been processed or not 
+\begin{DoxyParams}{Parameters}
+{\em value} & true or false \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Order.\+h\end{DoxyCompactItemize}

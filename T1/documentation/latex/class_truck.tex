@@ -1,0 +1,119 @@
+\hypertarget{class_truck}{}\doxysection{Truck Class Reference}
+\label{class_truck}\index{Truck@{Truck}}
+
+
+{\ttfamily \#include $<$Truck.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_truck_acef7aa39eb75620f051f0cce6544c61c}{Truck}} (unsigned max\+Volume, unsigned max\+Weight, unsigned cost)
+\item 
+\mbox{\hyperlink{class_truck_afe887186d0490451a8ce4a3ef433dee3}{$\sim$\+Truck}} ()
+\item 
+unsigned \mbox{\hyperlink{class_truck_ae98a50bbbc90bd22c471999a9625e794}{get\+Max\+Volume}} ()
+\item 
+unsigned \mbox{\hyperlink{class_truck_afb5f84ec133cacab15aa0d82b0ac0934}{get\+Max\+Weight}} ()
+\item 
+unsigned \mbox{\hyperlink{class_truck_aaec8353f74453892b7c41d9a9d42c34a}{get\+Cost}} ()
+\item 
+bool \mbox{\hyperlink{class_truck_a93446e4c53ff6b3f46d79cd59c862a0f}{get\+Full}} ()
+\item 
+void \mbox{\hyperlink{class_truck_a6b138877f553deac3ff90d800e891368}{set\+Full}} ()
+\item 
+void \mbox{\hyperlink{class_truck_a333f9118420ac2ded82ec26146e5c6fa}{set\+Empty}} ()
+\item 
+\mbox{\hyperlink{class_cargo}{Cargo}} \& \mbox{\hyperlink{class_truck_aeaa5cbc300ff48358e930a061da1975c}{get\+Cargo}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents the trucks in this project. Trucks are represented by a maximum volume, a maximum weight and cost of transportation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_truck_acef7aa39eb75620f051f0cce6544c61c}\label{class_truck_acef7aa39eb75620f051f0cce6544c61c}} 
+\index{Truck@{Truck}!Truck@{Truck}}
+\index{Truck@{Truck}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{Truck()}{Truck()}}
+{\footnotesize\ttfamily Truck\+::\+Truck (\begin{DoxyParamCaption}\item[{unsigned}]{max\+Volume,  }\item[{unsigned}]{max\+Weight,  }\item[{unsigned}]{cost }\end{DoxyParamCaption})}
+
+Class constructor with 3 unsigned objects 
+\begin{DoxyParams}{Parameters}
+{\em max\+Volume} & truck\textquotesingle{}s maximum supported volume \\
+\hline
+{\em max\+Weight} & truck\textquotesingle{}s maximum supported weight \\
+\hline
+{\em cost} & truck\textquotesingle{}s cost of transportation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_truck_afe887186d0490451a8ce4a3ef433dee3}\label{class_truck_afe887186d0490451a8ce4a3ef433dee3}} 
+\index{Truck@{Truck}!````~Truck@{$\sim$Truck}}
+\index{````~Truck@{$\sim$Truck}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{$\sim$Truck()}{~Truck()}}
+{\footnotesize\ttfamily Truck\+::$\sim$\+Truck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Class destructor to clear the object in memory 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_truck_aeaa5cbc300ff48358e930a061da1975c}\label{class_truck_aeaa5cbc300ff48358e930a061da1975c}} 
+\index{Truck@{Truck}!getCargo@{getCargo}}
+\index{getCargo@{getCargo}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{getCargo()}{getCargo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_cargo}{Cargo}} \& Truck\+::get\+Cargo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+returns truck´s cargo \begin{DoxyReturn}{Returns}
+truck\textquotesingle{}s cargo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_truck_aaec8353f74453892b7c41d9a9d42c34a}\label{class_truck_aaec8353f74453892b7c41d9a9d42c34a}} 
+\index{Truck@{Truck}!getCost@{getCost}}
+\index{getCost@{getCost}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily unsigned Truck\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+returns truck\textquotesingle{}s cost to cargo transport \begin{DoxyReturn}{Returns}
+cost parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_truck_a93446e4c53ff6b3f46d79cd59c862a0f}\label{class_truck_a93446e4c53ff6b3f46d79cd59c862a0f}} 
+\index{Truck@{Truck}!getFull@{getFull}}
+\index{getFull@{getFull}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{getFull()}{getFull()}}
+{\footnotesize\ttfamily bool Truck\+::get\+Full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+returns assigned value (true or false) to full parameter \begin{DoxyReturn}{Returns}
+assigned value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_truck_ae98a50bbbc90bd22c471999a9625e794}\label{class_truck_ae98a50bbbc90bd22c471999a9625e794}} 
+\index{Truck@{Truck}!getMaxVolume@{getMaxVolume}}
+\index{getMaxVolume@{getMaxVolume}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{getMaxVolume()}{getMaxVolume()}}
+{\footnotesize\ttfamily unsigned Truck\+::get\+Max\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+returns truck\textquotesingle{}s maximum volume supported \begin{DoxyReturn}{Returns}
+max\+Volume parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_truck_afb5f84ec133cacab15aa0d82b0ac0934}\label{class_truck_afb5f84ec133cacab15aa0d82b0ac0934}} 
+\index{Truck@{Truck}!getMaxWeight@{getMaxWeight}}
+\index{getMaxWeight@{getMaxWeight}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{getMaxWeight()}{getMaxWeight()}}
+{\footnotesize\ttfamily unsigned Truck\+::get\+Max\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+returns truck\textquotesingle{}s maximum weight supported \begin{DoxyReturn}{Returns}
+max\+Weight parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_truck_a333f9118420ac2ded82ec26146e5c6fa}\label{class_truck_a333f9118420ac2ded82ec26146e5c6fa}} 
+\index{Truck@{Truck}!setEmpty@{setEmpty}}
+\index{setEmpty@{setEmpty}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{setEmpty()}{setEmpty()}}
+{\footnotesize\ttfamily void Truck\+::set\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+assigns full parameter value to false \mbox{\Hypertarget{class_truck_a6b138877f553deac3ff90d800e891368}\label{class_truck_a6b138877f553deac3ff90d800e891368}} 
+\index{Truck@{Truck}!setFull@{setFull}}
+\index{setFull@{setFull}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{setFull()}{setFull()}}
+{\footnotesize\ttfamily void Truck\+::set\+Full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+assigns full parameter value to true 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Truck.\+h\end{DoxyCompactItemize}

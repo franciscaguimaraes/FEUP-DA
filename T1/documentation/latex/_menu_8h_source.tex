@@ -1,0 +1,51 @@
+\hypertarget{_menu_8h_source}{}\doxysection{Menu.\+h}
+\label{_menu_8h_source}\index{include/Menu.h@{include/Menu.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by franc on 12/04/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef DA\_T1\_MENU\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define DA\_T1\_MENU\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}Application.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_menu}{Menu}} \{}
+\DoxyCodeLine{16 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_application}{Application}} \&application;}
+\DoxyCodeLine{18 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_menu_a7fa06c9f0489c730362185b094c91a8c}{Menu}}(\mbox{\hyperlink{class_application}{Application}} \&application);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{28     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_menu_a5bf168cbb40e28e718ced8f248b3d37a}{\string~Menu}}();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{33     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_a94b92b5dc7993422a01de6f37848551e}{display}}()=0;}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{39     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_menu}{Menu}} *\mbox{\hyperlink{class_menu_ae525fc09ec724c3808497a84a57d8e2a}{executeMenu}}()=0;}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{45     \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_menu_a1560e4f6b68e6be3529b1104f1754d9f}{readInt}}();}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{51     \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_menu_a26a3f8034923935aefc7bdecb5fde749}{askUser}}();}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{57     \textcolor{keyword}{static} std::string \mbox{\hyperlink{class_menu_a38fdc8214ef3f6bb68f66df8825e6abb}{readStr}}();}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{62     \mbox{\hyperlink{class_menu}{Menu}} *\mbox{\hyperlink{class_menu_a346361534eaaddd48af187579ca296c2}{invalidInput}}();}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{69     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_menu_ac5e5082d2e54188af4549c1dc7cfac6e}{getAllOrdersReward}}(vector<Order> orders);}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{keyword}{class }\mbox{\hyperlink{class_main_menu}{MainMenu}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_menu}{Menu}}\{}
+\DoxyCodeLine{75 \textcolor{keyword}{public}:}
+\DoxyCodeLine{76     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_main_menu}{MainMenu}}(\mbox{\hyperlink{class_application}{Application}} \&application);}
+\DoxyCodeLine{77     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_main_menu_a1b531d98ccd8f877ea0f1c5e1544e0fa}{display}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{78     \mbox{\hyperlink{class_menu}{Menu}} *\mbox{\hyperlink{class_main_menu_adecdeb4b45d1bbe1c0f951b2ffeb9b05}{executeMenu}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{79 \};}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DA\_T1\_MENU\_H}}
+
+\end{DoxyCode}

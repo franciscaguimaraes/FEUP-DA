@@ -1,0 +1,68 @@
+\hypertarget{class_read_files}{}\doxysection{Read\+Files Class Reference}
+\label{class_read_files}\index{ReadFiles@{ReadFiles}}
+
+
+{\ttfamily \#include $<$Read\+Files.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_read_files_aa011e2c1a6cdcd3482839d98d8641152}{file\+Reader}} (string name)
+\item 
+vector$<$ \mbox{\hyperlink{class_truck}{Truck}} $>$ $\ast$ \mbox{\hyperlink{class_read_files_a5b926894e6832c46eea709ebdcc26350}{get\+Truck\+From\+Files}} (string s1)
+\item 
+vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ $\ast$ \mbox{\hyperlink{class_read_files_a0230d4d0cdcb450ded23713c4e2cb942}{get\+Order\+From\+Files}} (string s1)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class reads input files, initializing important vectors in the project. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_read_files_aa011e2c1a6cdcd3482839d98d8641152}\label{class_read_files_aa011e2c1a6cdcd3482839d98d8641152}} 
+\index{ReadFiles@{ReadFiles}!fileReader@{fileReader}}
+\index{fileReader@{fileReader}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{fileReader()}{fileReader()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Read\+Files\+::file\+Reader (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+reads from file skipping first line 
+\begin{DoxyParams}{Parameters}
+{\em name} & file to be read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_read_files_a0230d4d0cdcb450ded23713c4e2cb942}\label{class_read_files_a0230d4d0cdcb450ded23713c4e2cb942}} 
+\index{ReadFiles@{ReadFiles}!getOrderFromFiles@{getOrderFromFiles}}
+\index{getOrderFromFiles@{getOrderFromFiles}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{getOrderFromFiles()}{getOrderFromFiles()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ $\ast$ Read\+Files\+::get\+Order\+From\+Files (\begin{DoxyParamCaption}\item[{string}]{s1 }\end{DoxyParamCaption})}
+
+reads from input and stores into orders\textquotesingle{} vector 
+\begin{DoxyParams}{Parameters}
+{\em s1} & file to be read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector orders 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_read_files_a5b926894e6832c46eea709ebdcc26350}\label{class_read_files_a5b926894e6832c46eea709ebdcc26350}} 
+\index{ReadFiles@{ReadFiles}!getTruckFromFiles@{getTruckFromFiles}}
+\index{getTruckFromFiles@{getTruckFromFiles}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{getTruckFromFiles()}{getTruckFromFiles()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_truck}{Truck}} $>$ $\ast$ Read\+Files\+::get\+Truck\+From\+Files (\begin{DoxyParamCaption}\item[{string}]{s1 }\end{DoxyParamCaption})}
+
+reads from file and stores into trucks\textquotesingle{} vector 
+\begin{DoxyParams}{Parameters}
+{\em s1} & file to be read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector trucks 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Read\+Files.\+h\end{DoxyCompactItemize}

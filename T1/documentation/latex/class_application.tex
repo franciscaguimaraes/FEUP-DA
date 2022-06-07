@@ -1,0 +1,162 @@
+\hypertarget{class_application}{}\doxysection{Application Class Reference}
+\label{class_application}\index{Application@{Application}}
+
+
+{\ttfamily \#include $<$Application.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_application_afa8cc05ce6b6092be5ecdfdae44e05f8}{Application}} ()
+\item 
+void \mbox{\hyperlink{class_application_ad4b24c0bfc04a83a27dafc207a304163}{load\+Data}} ()
+\item 
+void \mbox{\hyperlink{class_application_ac8d94706846dc5373011f978a4e7cfa3}{sort\+Trucks}} (bool profit)
+\item 
+void \mbox{\hyperlink{class_application_a0b58dfb45094cf4c08150a2e0fe294c0}{sort\+Orders}} ()
+\item 
+\mbox{\hyperlink{class_order}{Order}} $\ast$ \mbox{\hyperlink{class_application_af0165d8c7fe2d280e54737574de020ab}{best\+Possible\+Order}} (float v, float w, float t)
+\item 
+\mbox{\hyperlink{class_order}{Order}} $\ast$ \mbox{\hyperlink{class_application_aaec6a9a3c81e91494b432d6b91b432a4}{best\+Fit}} (bool \&can\+Fit, \mbox{\hyperlink{class_cargo}{Cargo}} \&current)
+\item 
+bool \mbox{\hyperlink{class_application_ad33b055916953ae1dfeefd940fff7532}{is\+All\+Assigned}} ()
+\item 
+int \mbox{\hyperlink{class_application_a05ce7d0e7ed32a6af50a7e1fa0b34207}{scenery1}} (int \&num\+Orders)
+\item 
+int \mbox{\hyperlink{class_application_a4c2ecf5339f7ba57d9fa14ca59a5a1d5}{scenery2}} ()
+\item 
+vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ \mbox{\hyperlink{class_application_a7845e56d8b3faa637ec31d456395d4d1}{scenery3}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_application_af0eb6fa55aec90919d92faed45a5de0b}\label{class_application_af0eb6fa55aec90919d92faed45a5de0b}} 
+string {\bfseries filepath} = \char`\"{}../files/\char`\"{}
+\item 
+\mbox{\Hypertarget{class_application_a16c69f80178c163978a9c962604d2ba8}\label{class_application_a16c69f80178c163978a9c962604d2ba8}} 
+vector$<$ \mbox{\hyperlink{class_truck}{Truck}} $>$ {\bfseries trucks}
+\item 
+\mbox{\Hypertarget{class_application_abbb1629b0ab407c613496bcb3b216d90}\label{class_application_abbb1629b0ab407c613496bcb3b216d90}} 
+vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ {\bfseries orders}
+\item 
+\mbox{\Hypertarget{class_application_ad0b00a5f26f6eca7088166e73f270b65}\label{class_application_ad0b00a5f26f6eca7088166e73f270b65}} 
+vector$<$ \mbox{\hyperlink{class_cargo}{Cargo}} $>$ {\bfseries cargo}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents our application and every operation being processed in the sceneries, the main focus of our project. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_application_afa8cc05ce6b6092be5ecdfdae44e05f8}\label{class_application_afa8cc05ce6b6092be5ecdfdae44e05f8}} 
+\index{Application@{Application}!Application@{Application}}
+\index{Application@{Application}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Application()}{Application()}}
+{\footnotesize\ttfamily Application\+::\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default Constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_application_aaec6a9a3c81e91494b432d6b91b432a4}\label{class_application_aaec6a9a3c81e91494b432d6b91b432a4}} 
+\index{Application@{Application}!bestFit@{bestFit}}
+\index{bestFit@{bestFit}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{bestFit()}{bestFit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_order}{Order}} $\ast$ Application\+::best\+Fit (\begin{DoxyParamCaption}\item[{bool \&}]{can\+Fit,  }\item[{\mbox{\hyperlink{class_cargo}{Cargo}} \&}]{current }\end{DoxyParamCaption})}
+
+returns the best fit at that moment using the best possible order function and if it can fit or not in the cargo 
+\begin{DoxyParams}{Parameters}
+{\em can\+Fit} & returns whether the order can fit in the cargo through reference \\
+\hline
+{\em current} & pointer to the current cargo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the best possible order that fits 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_application_af0165d8c7fe2d280e54737574de020ab}\label{class_application_af0165d8c7fe2d280e54737574de020ab}} 
+\index{Application@{Application}!bestPossibleOrder@{bestPossibleOrder}}
+\index{bestPossibleOrder@{bestPossibleOrder}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{bestPossibleOrder()}{bestPossibleOrder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_order}{Order}} $\ast$ Application\+::best\+Possible\+Order (\begin{DoxyParamCaption}\item[{float}]{v,  }\item[{float}]{w,  }\item[{float}]{t }\end{DoxyParamCaption})}
+
+returns the best possible order at that moment with the given percentages 
+\begin{DoxyParams}{Parameters}
+{\em v} & volume percentage \\
+\hline
+{\em w} & weight percentage \\
+\hline
+{\em t} & time percentage \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the best possible order 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_application_ad33b055916953ae1dfeefd940fff7532}\label{class_application_ad33b055916953ae1dfeefd940fff7532}} 
+\index{Application@{Application}!isAllAssigned@{isAllAssigned}}
+\index{isAllAssigned@{isAllAssigned}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{isAllAssigned()}{isAllAssigned()}}
+{\footnotesize\ttfamily bool Application\+::is\+All\+Assigned (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+True if all orders and all trucks have been processed. Returns false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_application_ad4b24c0bfc04a83a27dafc207a304163}\label{class_application_ad4b24c0bfc04a83a27dafc207a304163}} 
+\index{Application@{Application}!loadData@{loadData}}
+\index{loadData@{loadData}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{loadData()}{loadData()}}
+{\footnotesize\ttfamily void Application\+::load\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Loads to the \mbox{\hyperlink{class_application}{Application}} input files storing the data in its\textquotesingle{} respective vectors \mbox{\Hypertarget{class_application_a05ce7d0e7ed32a6af50a7e1fa0b34207}\label{class_application_a05ce7d0e7ed32a6af50a7e1fa0b34207}} 
+\index{Application@{Application}!scenery1@{scenery1}}
+\index{scenery1@{scenery1}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{scenery1()}{scenery1()}}
+{\footnotesize\ttfamily int Application\+::scenery1 (\begin{DoxyParamCaption}\item[{int \&}]{num\+Orders }\end{DoxyParamCaption})}
+
+minimizes the number of trucks assigned for the maximum amount of orders possible 
+\begin{DoxyParams}{Parameters}
+{\em num\+Orders} & variable passed by reference, the number of orders processed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of trucks assigned 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_application_a4c2ecf5339f7ba57d9fa14ca59a5a1d5}\label{class_application_a4c2ecf5339f7ba57d9fa14ca59a5a1d5}} 
+\index{Application@{Application}!scenery2@{scenery2}}
+\index{scenery2@{scenery2}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{scenery2()}{scenery2()}}
+{\footnotesize\ttfamily int Application\+::scenery2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+maximizes the overall profit upon delivery \begin{DoxyReturn}{Returns}
+maximum profit 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_application_a7845e56d8b3faa637ec31d456395d4d1}\label{class_application_a7845e56d8b3faa637ec31d456395d4d1}} 
+\index{Application@{Application}!scenery3@{scenery3}}
+\index{scenery3@{scenery3}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{scenery3()}{scenery3()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ Application\+::scenery3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sorts orders\textquotesingle{} vector by duration and returns all orders that can be processed in a time limit of 8 hours \begin{DoxyReturn}{Returns}
+vector with all the orders that meet the time requirements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_application_a0b58dfb45094cf4c08150a2e0fe294c0}\label{class_application_a0b58dfb45094cf4c08150a2e0fe294c0}} 
+\index{Application@{Application}!sortOrders@{sortOrders}}
+\index{sortOrders@{sortOrders}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{sortOrders()}{sortOrders()}}
+{\footnotesize\ttfamily void Application\+::sort\+Orders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sorts orders ascending according to the following equation\+: sqrt(Volume$^\wedge$2 + Weight$^\wedge$2) \mbox{\Hypertarget{class_application_ac8d94706846dc5373011f978a4e7cfa3}\label{class_application_ac8d94706846dc5373011f978a4e7cfa3}} 
+\index{Application@{Application}!sortTrucks@{sortTrucks}}
+\index{sortTrucks@{sortTrucks}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{sortTrucks()}{sortTrucks()}}
+{\footnotesize\ttfamily void Application\+::sort\+Trucks (\begin{DoxyParamCaption}\item[{bool}]{profit }\end{DoxyParamCaption})}
+
+Sorts trucks accordingly to profit importance, if we want to sort according to cost (taking profit into consideration) we follow the following equation\+: (max\+Volume$^\wedge$2 + max\+Weight$^\wedge$2)$\ast$1.5+ cost; If we want to sort trucks not according to profit, we sort them descending with the following equation\+: sqrt(max\+Volume$^\wedge$2 + max\+Weight$^\wedge$2) 
+\begin{DoxyParams}{Parameters}
+{\em profit} & defines sorting order \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Application.\+h\end{DoxyCompactItemize}

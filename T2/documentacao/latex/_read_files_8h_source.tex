@@ -1,0 +1,32 @@
+\hypertarget{_read_files_8h_source}{}\doxysection{Read\+Files.\+h}
+\label{_read_files_8h_source}\index{C:/Users/franc/FEUP/LEIC/FEUP\_DA2/codigo/include/ReadFiles.h@{C:/Users/franc/FEUP/LEIC/FEUP\_DA2/codigo/include/ReadFiles.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by franc on 17/05/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifndef FEUP\_DA2\_READFILES\_H}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define FEUP\_DA2\_READFILES\_H}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{16 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_contents}{Contents}} \{}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} scr, dest, cap, dur;}
+\DoxyCodeLine{19 \};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{26 \textcolor{keywordtype}{bool} fileExists(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& f\_name);}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{33 vector<Contents> fileReader(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&file\_name);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{41 ostream \&operator<<(ostream \&os, \mbox{\hyperlink{struct_contents}{Contents}} \&contents);}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{49 istream \&operator>>(istream \&is, \mbox{\hyperlink{struct_contents}{Contents}} \&contents);}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//FEUP\_DA2\_READFILES\_H}}
+
+\end{DoxyCode}

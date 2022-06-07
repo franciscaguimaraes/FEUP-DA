@@ -1,0 +1,63 @@
+\hypertarget{_menu_8h_source}{}\doxysection{Menu.\+h}
+\label{_menu_8h_source}\index{C:/Users/franc/FEUP/LEIC/FEUP\_DA2/codigo/include/Menu.h@{C:/Users/franc/FEUP/LEIC/FEUP\_DA2/codigo/include/Menu.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by franc on 18/05/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef FEUP\_DA2\_MENU\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define FEUP\_DA2\_MENU\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}Application.h"{}}}
+\DoxyCodeLine{11 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_menu}{Menu}} \{}
+\DoxyCodeLine{17 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_application}{Application}} \&application;}
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_menu_a7fa06c9f0489c730362185b094c91a8c}{Menu}}(\mbox{\hyperlink{class_application}{Application}} \&application);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{29     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_menu_a5bf168cbb40e28e718ced8f248b3d37a}{\string~Menu}}();}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{34     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_a94b92b5dc7993422a01de6f37848551e}{display}}()=0;}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{40     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_menu}{Menu}} *\mbox{\hyperlink{class_menu_ae525fc09ec724c3808497a84a57d8e2a}{executeMenu}}()=0;}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{46     \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_menu_a1560e4f6b68e6be3529b1104f1754d9f}{readInt}}();}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{52     \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_menu_a26a3f8034923935aefc7bdecb5fde749}{askUser}}();}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{58     \textcolor{keyword}{static} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_menu_a2df90ac53f22ead7e9fcdc222c32b1df}{readStr}}();}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{63     \mbox{\hyperlink{class_menu}{Menu}} *\mbox{\hyperlink{class_menu_a346361534eaaddd48af187579ca296c2}{invalidInput}}();}
+\DoxyCodeLine{64 \};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{keyword}{class }\mbox{\hyperlink{class_main_menu}{MainMenu}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_menu}{Menu}}\{}
+\DoxyCodeLine{67 \textcolor{keyword}{public}:}
+\DoxyCodeLine{68     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_main_menu}{MainMenu}}(\mbox{\hyperlink{class_application}{Application}} \&application);}
+\DoxyCodeLine{69     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_main_menu_a1b531d98ccd8f877ea0f1c5e1544e0fa}{display}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{70     \mbox{\hyperlink{class_menu}{Menu}} *\mbox{\hyperlink{class_main_menu_adecdeb4b45d1bbe1c0f951b2ffeb9b05}{executeMenu}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{71 \};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{keyword}{class }\mbox{\hyperlink{class_scenery_one}{SceneryOne}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_menu}{Menu}}\{}
+\DoxyCodeLine{74 \textcolor{keyword}{public}:}
+\DoxyCodeLine{75     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_scenery_one}{SceneryOne}}(\mbox{\hyperlink{class_application}{Application}} \&app);}
+\DoxyCodeLine{76     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_scenery_one_add385938f5f3b71aa0328a39c359c798}{display}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{77     \mbox{\hyperlink{class_menu}{Menu}} *\mbox{\hyperlink{class_scenery_one_abe30aead0e1a43876ae968af1c58fdb7}{executeMenu}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{78 \};}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{keyword}{class }\mbox{\hyperlink{class_scenery_two}{SceneryTwo}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_menu}{Menu}}\{}
+\DoxyCodeLine{81 \textcolor{keyword}{public}:}
+\DoxyCodeLine{82     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_scenery_two}{SceneryTwo}}(\mbox{\hyperlink{class_application}{Application}} \&app);}
+\DoxyCodeLine{83     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_scenery_two_ac8c96f690226f2c0133a4921540a2dc7}{display}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{84     \mbox{\hyperlink{class_menu}{Menu}} *\mbox{\hyperlink{class_scenery_two_acd8cff0f4f0eb5cfe5ad955957524d2b}{executeMenu}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{85 \};}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//FEUP\_DA2\_MENU\_H}}
+
+\end{DoxyCode}

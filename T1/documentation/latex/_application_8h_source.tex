@@ -1,0 +1,52 @@
+\hypertarget{_application_8h_source}{}\doxysection{Application.\+h}
+\label{_application_8h_source}\index{include/Application.h@{include/Application.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by franc on 12/04/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef DA\_T1\_APPLICATION\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define DA\_T1\_APPLICATION\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}ReadFiles.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}Cargo.h"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}map"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_application}{Application}} \{}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{private}:}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_read_files}{ReadFiles}} readFiles;}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     \textcolor{keywordtype}{string} filepath = \textcolor{stringliteral}{"{}../files/"{}};}
+\DoxyCodeLine{24     vector<Truck> trucks;}
+\DoxyCodeLine{25     vector<Order> orders;}
+\DoxyCodeLine{26     vector<Cargo> cargo;}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{31     \mbox{\hyperlink{class_application_afa8cc05ce6b6092be5ecdfdae44e05f8}{Application}}();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_application_ad4b24c0bfc04a83a27dafc207a304163}{loadData}}();}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_application_ac8d94706846dc5373011f978a4e7cfa3}{sortTrucks}}(\textcolor{keywordtype}{bool} profit);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_application_a0b58dfb45094cf4c08150a2e0fe294c0}{sortOrders}}();}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{60     \mbox{\hyperlink{class_order}{Order}} *\mbox{\hyperlink{class_application_af0165d8c7fe2d280e54737574de020ab}{bestPossibleOrder}}(\textcolor{keywordtype}{float} v, \textcolor{keywordtype}{float} w, \textcolor{keywordtype}{float} t);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{68     \mbox{\hyperlink{class_order}{Order}} *\mbox{\hyperlink{class_application_aaec6a9a3c81e91494b432d6b91b432a4}{bestFit}}(\textcolor{keywordtype}{bool} \&canFit, \mbox{\hyperlink{class_cargo}{Cargo}} \&current);}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{73     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_application_ad33b055916953ae1dfeefd940fff7532}{isAllAssigned}}();}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{80     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_application_a05ce7d0e7ed32a6af50a7e1fa0b34207}{scenery1}}(\textcolor{keywordtype}{int} \&numOrders);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{86     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_application_a4c2ecf5339f7ba57d9fa14ca59a5a1d5}{scenery2}}();}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{92     vector<Order> \mbox{\hyperlink{class_application_a7845e56d8b3faa637ec31d456395d4d1}{scenery3}}();}
+\DoxyCodeLine{93 \};}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DA\_T1\_APPLICATION\_H}}
+
+\end{DoxyCode}

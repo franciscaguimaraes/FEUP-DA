@@ -1,0 +1,117 @@
+\hypertarget{class_application}{}\doxysection{Application Class Reference}
+\label{class_application}\index{Application@{Application}}
+
+
+{\ttfamily \#include $<$Application.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_application_afa8cc05ce6b6092be5ecdfdae44e05f8}{Application}} ()
+\item 
+void \mbox{\hyperlink{class_application_a1ab8770b04f89b1d399172aae13e2685}{scenery1\+\_\+1}} (int num\+Input)
+\item 
+void \mbox{\hyperlink{class_application_a574e74ed40956d8184a62b2de4f222f7}{scenery1\+\_\+2}} (int num\+Input)
+\item 
+void \mbox{\hyperlink{class_application_a913217a6ee2d41c879a1fe95bc63ac6a}{scenery2\+\_\+1}} (int num\+Input, int size)
+\item 
+void \mbox{\hyperlink{class_application_afc9bd7b116a7bcf922317fe8268a38da}{scenery2\+\_\+3}} (int num\+Input)
+\item 
+void \mbox{\hyperlink{class_application_ad9c499f7b9f42955445b05179162e84e}{scenery2\+\_\+4}} (int num\+Input)
+\item 
+void \mbox{\hyperlink{class_application_adbcf977644ed3a79d5829456ca020f8d}{scenery2\+\_\+5}} (int num\+Input)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_application_af0eb6fa55aec90919d92faed45a5de0b}\label{class_application_af0eb6fa55aec90919d92faed45a5de0b}} 
+string {\bfseries filepath}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents our application and every operation being processed in the sceneries, the main focus of our project. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_application_afa8cc05ce6b6092be5ecdfdae44e05f8}\label{class_application_afa8cc05ce6b6092be5ecdfdae44e05f8}} 
+\index{Application@{Application}!Application@{Application}}
+\index{Application@{Application}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Application()}{Application()}}
+{\footnotesize\ttfamily Application\+::\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default Constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_application_a1ab8770b04f89b1d399172aae13e2685}\label{class_application_a1ab8770b04f89b1d399172aae13e2685}} 
+\index{Application@{Application}!scenery1\_1@{scenery1\_1}}
+\index{scenery1\_1@{scenery1\_1}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{scenery1\_1()}{scenery1\_1()}}
+{\footnotesize\ttfamily void Application\+::scenery1\+\_\+1 (\begin{DoxyParamCaption}\item[{int}]{num\+Input }\end{DoxyParamCaption})}
+
+prints the maximum capacity path disregarding any other constraints 
+\begin{DoxyParams}{Parameters}
+{\em num\+Input} & File number to be processed; \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_application_a574e74ed40956d8184a62b2de4f222f7}\label{class_application_a574e74ed40956d8184a62b2de4f222f7}} 
+\index{Application@{Application}!scenery1\_2@{scenery1\_2}}
+\index{scenery1\_2@{scenery1\_2}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{scenery1\_2()}{scenery1\_2()}}
+{\footnotesize\ttfamily void Application\+::scenery1\+\_\+2 (\begin{DoxyParamCaption}\item[{int}]{num\+Input }\end{DoxyParamCaption})}
+
+prints the pareto-\/optimal results regarding max capacity and lowest number of layovers 
+\begin{DoxyParams}{Parameters}
+{\em num\+Input} & File number to be processed; \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_application_a913217a6ee2d41c879a1fe95bc63ac6a}\label{class_application_a913217a6ee2d41c879a1fe95bc63ac6a}} 
+\index{Application@{Application}!scenery2\_1@{scenery2\_1}}
+\index{scenery2\_1@{scenery2\_1}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{scenery2\_1()}{scenery2\_1()}}
+{\footnotesize\ttfamily void Application\+::scenery2\+\_\+1 (\begin{DoxyParamCaption}\item[{int}]{num\+Input,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+returns max\+Flow and prints augmenting paths, taking in consideration size input 
+\begin{DoxyParams}{Parameters}
+{\em num\+Input} & file number to be processed \\
+\hline
+{\em size} & input size to be considered in ford\+Fulkerson function \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_application_afc9bd7b116a7bcf922317fe8268a38da}\label{class_application_afc9bd7b116a7bcf922317fe8268a38da}} 
+\index{Application@{Application}!scenery2\_3@{scenery2\_3}}
+\index{scenery2\_3@{scenery2\_3}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{scenery2\_3()}{scenery2\_3()}}
+{\footnotesize\ttfamily void Application\+::scenery2\+\_\+3 (\begin{DoxyParamCaption}\item[{int}]{num\+Input }\end{DoxyParamCaption})}
+
+returns max\+Flow and prints augmenting paths 
+\begin{DoxyParams}{Parameters}
+{\em num\+Input} & file number to be processed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_application_ad9c499f7b9f42955445b05179162e84e}\label{class_application_ad9c499f7b9f42955445b05179162e84e}} 
+\index{Application@{Application}!scenery2\_4@{scenery2\_4}}
+\index{scenery2\_4@{scenery2\_4}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{scenery2\_4()}{scenery2\_4()}}
+{\footnotesize\ttfamily void Application\+::scenery2\+\_\+4 (\begin{DoxyParamCaption}\item[{int}]{num\+Input }\end{DoxyParamCaption})}
+
+returns dur\+Min and prints the final node where the group meets again 
+\begin{DoxyParams}{Parameters}
+{\em num\+Input} & file number to be processed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_application_adbcf977644ed3a79d5829456ca020f8d}\label{class_application_adbcf977644ed3a79d5829456ca020f8d}} 
+\index{Application@{Application}!scenery2\_5@{scenery2\_5}}
+\index{scenery2\_5@{scenery2\_5}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{scenery2\_5()}{scenery2\_5()}}
+{\footnotesize\ttfamily void Application\+::scenery2\+\_\+5 (\begin{DoxyParamCaption}\item[{int}]{num\+Input }\end{DoxyParamCaption})}
+
+returns maximum waiting time and prints it 
+\begin{DoxyParams}{Parameters}
+{\em num\+Input} & file number to be processed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/franc/\+FEUP/\+LEIC/\+FEUP\+\_\+\+DA2/codigo/include/Application.\+h\end{DoxyCompactItemize}

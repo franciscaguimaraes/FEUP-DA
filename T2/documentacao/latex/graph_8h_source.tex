@@ -1,0 +1,69 @@
+\hypertarget{graph_8h_source}{}\doxysection{graph.\+h}
+\label{graph_8h_source}\index{C:/Users/franc/FEUP/LEIC/FEUP\_DA2/codigo/include/graph.h@{C:/Users/franc/FEUP/LEIC/FEUP\_DA2/codigo/include/graph.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by franc on 17/05/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef FEUP\_DA2\_\_GRAPH\_H\_}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define FEUP\_DA2\_\_GRAPH\_H\_}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <queue>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define INF (INT\_MAX/2)}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{class_graph}{Graph}} \{}
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{26     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_graph_1_1_edge}{Edge}} \{}
+\DoxyCodeLine{27         \textcolor{keywordtype}{int} dest;  \textcolor{comment}{// Destination nodes}}
+\DoxyCodeLine{28         \textcolor{keywordtype}{int} cap; \textcolor{comment}{// An integer weight}}
+\DoxyCodeLine{29         \textcolor{keywordtype}{int} dur; \textcolor{comment}{// duration}}
+\DoxyCodeLine{30     \};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{35     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_graph_1_1_node}{Node}} \{}
+\DoxyCodeLine{36         list<Edge> adj; \textcolor{comment}{// The list of outgoing edges (to adjacent nodes)}}
+\DoxyCodeLine{37         \textcolor{keywordtype}{int} dist;}
+\DoxyCodeLine{38         \textcolor{keywordtype}{int} pred;}
+\DoxyCodeLine{39         \textcolor{keywordtype}{bool} visited;}
+\DoxyCodeLine{40         \textcolor{keywordtype}{int} layovers;}
+\DoxyCodeLine{41         \textcolor{keywordtype}{int} earliestStart;}
+\DoxyCodeLine{42         \textcolor{keywordtype}{int} FL = 0;}
+\DoxyCodeLine{43         \textcolor{keywordtype}{int} grau;}
+\DoxyCodeLine{44     \};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{keywordtype}{int} n; \textcolor{comment}{// Graph size (vertices are numbered from 1 to n)}}
+\DoxyCodeLine{47     \textcolor{keywordtype}{bool} hasResidual; \textcolor{comment}{// false: directed graph; true: undirected graph}}
+\DoxyCodeLine{48     vector<Node> nodes; \textcolor{comment}{// The list of nodes being represented}}
+\DoxyCodeLine{49     vector<vector <int>> residualMatrix; \textcolor{comment}{// residualMatrix to store residual capacities}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{keyword}{public}:}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{60     \textcolor{keyword}{static} \mbox{\hyperlink{class_graph}{Graph}} \mbox{\hyperlink{class_graph_acffdf3cda5160ccc94cc42bae5788eac}{createGraph}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& s1, \textcolor{keywordtype}{bool} residual, \textcolor{keywordtype}{int} offSet);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{67     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_graph_a4286a3090c25d6776d233cc7ff657fb9}{Graph}}(\textcolor{keywordtype}{int} nodes, \textcolor{keywordtype}{bool} residual = \textcolor{keyword}{false});}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{76     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a1b47285696c9612d673e95d76ce1e899}{addEdge}}(\textcolor{keywordtype}{int} src, \textcolor{keywordtype}{int} dest, \textcolor{keywordtype}{int} capacity = 1, \textcolor{keywordtype}{int} duration = 1);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{84     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_graph_a24ec7c1d611545632d47dea0d126ce1d}{maxCap}}(\textcolor{keywordtype}{int} a, \textcolor{keywordtype}{int} b);}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{94     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_graph_a7a9780895287e2edb4e033fe24d45341}{pareto}}(\textcolor{keywordtype}{int} a, \textcolor{keywordtype}{int} b,\textcolor{keywordtype}{int} max);}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{105     list<int> \mbox{\hyperlink{class_graph_a456a8ddf60b359cf7b94e4bd2a41ab63}{path\_taken}}(\textcolor{keywordtype}{int} a, \textcolor{keywordtype}{int} b, \textcolor{keywordtype}{int} max);}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{113     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_graph_ae96fe99dc536a1d69c3e87ada1db6a2e}{bfs}}(\textcolor{keywordtype}{int} s, \textcolor{keywordtype}{int} t);}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{122     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a3f71386ad424f5a74709cf2fa2b85190}{edmondsKarp}}(\textcolor{keywordtype}{int} s, \textcolor{keywordtype}{int} t, \textcolor{keywordtype}{int} \&maxFlow, \textcolor{keywordtype}{int} offset);}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{127     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_ae022775b3a50783557b473fb7bb8c5f8}{earliestStart}}();}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{132     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a693cbcb9b294e48996a70b14bbe75a70}{flSolve}}();}
+\DoxyCodeLine{133 \};}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

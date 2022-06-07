@@ -1,0 +1,62 @@
+\hypertarget{_cargo_8h_source}{}\doxysection{Cargo.\+h}
+\label{_cargo_8h_source}\index{include/Cargo.h@{include/Cargo.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by franc on 12/04/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef DA\_T1\_CARGO\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define DA\_T1\_CARGO\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}Order.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{10 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_cargo}{Cargo}} \{}
+\DoxyCodeLine{18     \textcolor{keywordtype}{unsigned} maxVolume;}
+\DoxyCodeLine{19     \textcolor{keywordtype}{unsigned} currentVolume;}
+\DoxyCodeLine{20     \textcolor{keywordtype}{unsigned} maxWeight;}
+\DoxyCodeLine{21     \textcolor{keywordtype}{unsigned} maxTime;}
+\DoxyCodeLine{22     \textcolor{keywordtype}{unsigned} currentWeight;}
+\DoxyCodeLine{23     \textcolor{keywordtype}{unsigned} currentTime;}
+\DoxyCodeLine{24     vector <Order> orders;}
+\DoxyCodeLine{25     \textcolor{keywordtype}{int} profit;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{public}:}
+\DoxyCodeLine{35     \mbox{\hyperlink{class_cargo_a941cca3625f7c418184726bde5e6be96}{Cargo}}(\textcolor{keywordtype}{unsigned} maxVolume, \textcolor{keywordtype}{unsigned} maxWeight, \textcolor{keywordtype}{unsigned} cost, \textcolor{keywordtype}{unsigned} time);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{class_cargo_ae40259f77613a26a165ad352ac73a127}{getMaxVolume}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{class_cargo_a29b2a3f40609a2ee238f63ed2de372f4}{getCurrentVolume}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{53     \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{class_cargo_aab7d676b0bdc8965a3f4d5d89e7528e1}{getMaxWeight}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{59     \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{class_cargo_a0f98db1ce97a0bb98c72d1ad6b2195b9}{getCurrentWeight}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{65     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_cargo_a9a24f7bbccfb2a5edbfb4ec29fd0eb90}{getProfit}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{71     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cargo_a2fd8db6a5159ee0aabb15311fd2f3fc6}{setCurrentVolume}}(\textcolor{keywordtype}{unsigned} volume);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{77     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cargo_a4127ca9f8968c9c3e4526a9d0080bc36}{setCurrentWeight}}(\textcolor{keywordtype}{unsigned} weight);}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{83     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cargo_a68c7421a98bc881d6be520f4816b72e6}{setProfit}}(\textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{90     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_cargo_a600d33370be2f6e1574bc059244d8a0d}{canFit}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_order}{Order}}* \mbox{\hyperlink{class_order}{Order}}) \textcolor{keyword}{const};}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{96     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cargo_a8acb459bfb473ca07cc6fef968841ee3}{pushOrders}}(\mbox{\hyperlink{class_order}{Order}}* orders);}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{102     vector<Order>\& \mbox{\hyperlink{class_cargo_a300a356c5f875138a2b74d2f3951dddd}{getOrders}}();}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{108     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_cargo_a1e38211d814ce71f68be54c6f96c7a6d}{getCurrentTime}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{114     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cargo_a8a005b52acd404a2e4cacbc91417e5e8}{setCurrentTime}} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} time);}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{120     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_cargo_ae67ba4997859c73b0e9070c0804675a7}{getMaxTime}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{121 \};}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DA\_T1\_CARGO\_H}}
+
+\end{DoxyCode}

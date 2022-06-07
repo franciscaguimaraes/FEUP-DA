@@ -1,0 +1,143 @@
+\hypertarget{class_menu}{}\doxysection{Menu Class Reference}
+\label{class_menu}\index{Menu@{Menu}}
+
+
+{\ttfamily \#include $<$Menu.\+h$>$}
+
+Inheritance diagram for Menu\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_menu}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_menu_a7fa06c9f0489c730362185b094c91a8c}{Menu}} (\mbox{\hyperlink{class_application}{Application}} \&application)
+\item 
+virtual \mbox{\hyperlink{class_menu_a5bf168cbb40e28e718ced8f248b3d37a}{$\sim$\+Menu}} ()
+\item 
+virtual void \mbox{\hyperlink{class_menu_a94b92b5dc7993422a01de6f37848551e}{display}} ()=0
+\item 
+virtual \mbox{\hyperlink{class_menu}{Menu}} $\ast$ \mbox{\hyperlink{class_menu_ae525fc09ec724c3808497a84a57d8e2a}{execute\+Menu}} ()=0
+\item 
+\mbox{\hyperlink{class_menu}{Menu}} $\ast$ \mbox{\hyperlink{class_menu_a346361534eaaddd48af187579ca296c2}{invalid\+Input}} ()
+\item 
+int \mbox{\hyperlink{class_menu_ac5e5082d2e54188af4549c1dc7cfac6e}{get\+All\+Orders\+Reward}} (vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ orders)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_menu_a1560e4f6b68e6be3529b1104f1754d9f}{read\+Int}} ()
+\item 
+static int \mbox{\hyperlink{class_menu_a26a3f8034923935aefc7bdecb5fde749}{ask\+User}} ()
+\item 
+static std\+::string \mbox{\hyperlink{class_menu_a38fdc8214ef3f6bb68f66df8825e6abb}{read\+Str}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_menu_a687837b40bd13b87d328bb2d87c2faef}\label{class_menu_a687837b40bd13b87d328bb2d87c2faef}} 
+\mbox{\hyperlink{class_application}{Application}} \& {\bfseries application}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents what is being displayed in the terminal, our menu. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_menu_a7fa06c9f0489c730362185b094c91a8c}\label{class_menu_a7fa06c9f0489c730362185b094c91a8c}} 
+\index{Menu@{Menu}!Menu@{Menu}}
+\index{Menu@{Menu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{Menu()}{Menu()}}
+{\footnotesize\ttfamily Menu\+::\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_application}{Application}} \&}]{application }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Class constructor with an application object 
+\begin{DoxyParams}{Parameters}
+{\em application} & application object passed by reference \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_menu_a5bf168cbb40e28e718ced8f248b3d37a}\label{class_menu_a5bf168cbb40e28e718ced8f248b3d37a}} 
+\index{Menu@{Menu}!````~Menu@{$\sim$Menu}}
+\index{````~Menu@{$\sim$Menu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{$\sim$Menu()}{~Menu()}}
+{\footnotesize\ttfamily virtual Menu\+::$\sim$\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Class destructor to clear the object in memory 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_menu_a26a3f8034923935aefc7bdecb5fde749}\label{class_menu_a26a3f8034923935aefc7bdecb5fde749}} 
+\index{Menu@{Menu}!askUser@{askUser}}
+\index{askUser@{askUser}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{askUser()}{askUser()}}
+{\footnotesize\ttfamily static int Menu\+::ask\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Reads an integer number input from the terminal. Used to choose which data to analyse \begin{DoxyReturn}{Returns}
+integer number read 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_menu_a94b92b5dc7993422a01de6f37848551e}\label{class_menu_a94b92b5dc7993422a01de6f37848551e}} 
+\index{Menu@{Menu}!display@{display}}
+\index{display@{display}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily virtual void Menu\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Displays the menu in the terminal 
+
+Implemented in \mbox{\hyperlink{class_main_menu_a1b531d98ccd8f877ea0f1c5e1544e0fa}{Main\+Menu}}.
+
+\mbox{\Hypertarget{class_menu_ae525fc09ec724c3808497a84a57d8e2a}\label{class_menu_ae525fc09ec724c3808497a84a57d8e2a}} 
+\index{Menu@{Menu}!executeMenu@{executeMenu}}
+\index{executeMenu@{executeMenu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{executeMenu()}{executeMenu()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_menu}{Menu}} $\ast$ Menu\+::execute\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Gets a menu pointer to the next menu after this one \begin{DoxyReturn}{Returns}
+menu pointer 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_main_menu_adecdeb4b45d1bbe1c0f951b2ffeb9b05}{Main\+Menu}}.
+
+\mbox{\Hypertarget{class_menu_ac5e5082d2e54188af4549c1dc7cfac6e}\label{class_menu_ac5e5082d2e54188af4549c1dc7cfac6e}} 
+\index{Menu@{Menu}!getAllOrdersReward@{getAllOrdersReward}}
+\index{getAllOrdersReward@{getAllOrdersReward}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{getAllOrdersReward()}{getAllOrdersReward()}}
+{\footnotesize\ttfamily int Menu\+::get\+All\+Orders\+Reward (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$}]{orders }\end{DoxyParamCaption})}
+
+returns the sum of all orders\textquotesingle{} reward 
+\begin{DoxyParams}{Parameters}
+{\em orders} & vector to get reward parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sum 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_menu_a346361534eaaddd48af187579ca296c2}\label{class_menu_a346361534eaaddd48af187579ca296c2}} 
+\index{Menu@{Menu}!invalidInput@{invalidInput}}
+\index{invalidInput@{invalidInput}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{invalidInput()}{invalidInput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_menu}{Menu}} $\ast$ Menu\+::invalid\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Waits for enter key to be pressed \mbox{\Hypertarget{class_menu_a1560e4f6b68e6be3529b1104f1754d9f}\label{class_menu_a1560e4f6b68e6be3529b1104f1754d9f}} 
+\index{Menu@{Menu}!readInt@{readInt}}
+\index{readInt@{readInt}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{readInt()}{readInt()}}
+{\footnotesize\ttfamily static int Menu\+::read\+Int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Reads an integer number input from the terminal \begin{DoxyReturn}{Returns}
+integer number read 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_menu_a38fdc8214ef3f6bb68f66df8825e6abb}\label{class_menu_a38fdc8214ef3f6bb68f66df8825e6abb}} 
+\index{Menu@{Menu}!readStr@{readStr}}
+\index{readStr@{readStr}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{readStr()}{readStr()}}
+{\footnotesize\ttfamily static std\+::string Menu\+::read\+Str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Reads a string input from the terminal \begin{DoxyReturn}{Returns}
+string read 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Menu.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,213 @@
+\hypertarget{class_graph}{}\doxysection{Graph Class Reference}
+\label{class_graph}\index{Graph@{Graph}}
+
+
+{\ttfamily \#include $<$graph.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_graph_1_1_edge}{Edge}}
+\item 
+struct \mbox{\hyperlink{struct_graph_1_1_node}{Node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_graph_a4286a3090c25d6776d233cc7ff657fb9}{Graph}} (int nodes, bool residual=false)
+\item 
+void \mbox{\hyperlink{class_graph_a1b47285696c9612d673e95d76ce1e899}{add\+Edge}} (int src, int dest, int capacity=1, int duration=1)
+\item 
+int \mbox{\hyperlink{class_graph_a24ec7c1d611545632d47dea0d126ce1d}{max\+Cap}} (int a, int b)
+\item 
+int \mbox{\hyperlink{class_graph_a7a9780895287e2edb4e033fe24d45341}{pareto}} (int a, int b, int max)
+\item 
+list$<$ int $>$ \mbox{\hyperlink{class_graph_a456a8ddf60b359cf7b94e4bd2a41ab63}{path\+\_\+taken}} (int a, int b, int max)
+\item 
+bool \mbox{\hyperlink{class_graph_ae96fe99dc536a1d69c3e87ada1db6a2e}{bfs}} (int s, int t)
+\item 
+void \mbox{\hyperlink{class_graph_a3f71386ad424f5a74709cf2fa2b85190}{edmonds\+Karp}} (int s, int t, int \&max\+Flow, int offset)
+\item 
+void \mbox{\hyperlink{class_graph_ae022775b3a50783557b473fb7bb8c5f8}{earliest\+Start}} ()
+\item 
+void \mbox{\hyperlink{class_graph_a693cbcb9b294e48996a70b14bbe75a70}{fl\+Solve}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_graph}{Graph}} \mbox{\hyperlink{class_graph_acffdf3cda5160ccc94cc42bae5788eac}{create\+Graph}} (const string \&s1, bool residual, int off\+Set)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_a81a76a428e630453ef019a15b9092967}\label{class_graph_a81a76a428e630453ef019a15b9092967}} 
+int {\bfseries n}
+\item 
+\mbox{\Hypertarget{class_graph_a99cb6a62e95733e9592a37656f06deae}\label{class_graph_a99cb6a62e95733e9592a37656f06deae}} 
+bool {\bfseries has\+Residual}
+\item 
+\mbox{\Hypertarget{class_graph_a71b5e16eb9e0670fea3ecee3526abb41}\label{class_graph_a71b5e16eb9e0670fea3ecee3526abb41}} 
+vector$<$ \mbox{\hyperlink{struct_graph_1_1_node}{Node}} $>$ {\bfseries nodes}
+\item 
+\mbox{\Hypertarget{class_graph_a77149fa6b34a975fa38559323fdcbe40}\label{class_graph_a77149fa6b34a975fa38559323fdcbe40}} 
+vector$<$ vector$<$ int $>$ $>$ {\bfseries residual\+Matrix}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_graph}{Graph}} structure\+: composed of nodes linked by edges 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_graph_a4286a3090c25d6776d233cc7ff657fb9}\label{class_graph_a4286a3090c25d6776d233cc7ff657fb9}} 
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}}
+{\footnotesize\ttfamily Graph\+::\+Graph (\begin{DoxyParamCaption}\item[{int}]{nodes,  }\item[{bool}]{residual = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Creates a graph with N nodes and if there is a direction to their edges 
+\begin{DoxyParams}{Parameters}
+{\em nodes} & number of nodes to be built \\
+\hline
+{\em residual} & boolean if residual edge is to be existed exists \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_a1b47285696c9612d673e95d76ce1e899}\label{class_graph_a1b47285696c9612d673e95d76ce1e899}} 
+\index{Graph@{Graph}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily void Graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{int}]{src,  }\item[{int}]{dest,  }\item[{int}]{capacity = {\ttfamily 1},  }\item[{int}]{duration = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Adds an edge between two nodes 
+\begin{DoxyParams}{Parameters}
+{\em src} & start node to be linked \\
+\hline
+{\em dest} & end node to be linked \\
+\hline
+{\em capacity} & capacity (weight) of the edge \\
+\hline
+{\em duration} & additional attribute which represents the duration of that path \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_ae96fe99dc536a1d69c3e87ada1db6a2e}\label{class_graph_ae96fe99dc536a1d69c3e87ada1db6a2e}} 
+\index{Graph@{Graph}!bfs@{bfs}}
+\index{bfs@{bfs}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{bfs()}{bfs()}}
+{\footnotesize\ttfamily bool Graph\+::bfs (\begin{DoxyParamCaption}\item[{int}]{s,  }\item[{int}]{t }\end{DoxyParamCaption})}
+
+Returns true if there is a path from source \textquotesingle{}s\textquotesingle{} to target \textquotesingle{}t\textquotesingle{}. 
+\begin{DoxyParams}{Parameters}
+{\em s} & source value \\
+\hline
+{\em t} & target value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_acffdf3cda5160ccc94cc42bae5788eac}\label{class_graph_acffdf3cda5160ccc94cc42bae5788eac}} 
+\index{Graph@{Graph}!createGraph@{createGraph}}
+\index{createGraph@{createGraph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{createGraph()}{createGraph()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_graph}{Graph}} Graph\+::create\+Graph (\begin{DoxyParamCaption}\item[{const string \&}]{s1,  }\item[{bool}]{residual,  }\item[{int}]{off\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Adds the edges read from file s1 
+\begin{DoxyParams}{Parameters}
+{\em s1} & file name to be read \\
+\hline
+{\em res} & if we add residual edges or not. true if we want to, false otherwise \\
+\hline
+{\em off\+Set} & shift graph numbers one unit to add an initial node with input given capacity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+graph created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_ae022775b3a50783557b473fb7bb8c5f8}\label{class_graph_ae022775b3a50783557b473fb7bb8c5f8}} 
+\index{Graph@{Graph}!earliestStart@{earliestStart}}
+\index{earliestStart@{earliestStart}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{earliestStart()}{earliestStart()}}
+{\footnotesize\ttfamily void Graph\+::earliest\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+calculates through the critical path method the minimum duration of the project \mbox{\Hypertarget{class_graph_a3f71386ad424f5a74709cf2fa2b85190}\label{class_graph_a3f71386ad424f5a74709cf2fa2b85190}} 
+\index{Graph@{Graph}!edmondsKarp@{edmondsKarp}}
+\index{edmondsKarp@{edmondsKarp}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{edmondsKarp()}{edmondsKarp()}}
+{\footnotesize\ttfamily void Graph\+::edmonds\+Karp (\begin{DoxyParamCaption}\item[{int}]{s,  }\item[{int}]{t,  }\item[{int \&}]{max\+Flow,  }\item[{int}]{offset }\end{DoxyParamCaption})}
+
+Returns the maximum flow from s to t in the given graph. 
+\begin{DoxyParams}{Parameters}
+{\em s} & source value \\
+\hline
+{\em t} & target value \\
+\hline
+{\em max\+Flow} & maximum flow passed by reference \\
+\hline
+{\em offset} & for printing purposes only \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a693cbcb9b294e48996a70b14bbe75a70}\label{class_graph_a693cbcb9b294e48996a70b14bbe75a70}} 
+\index{Graph@{Graph}!flSolve@{flSolve}}
+\index{flSolve@{flSolve}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{flSolve()}{flSolve()}}
+{\footnotesize\ttfamily void Graph\+::fl\+Solve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+calculates the difference between the earliest start of node and the earliest start of and edge + its duration \mbox{\Hypertarget{class_graph_a24ec7c1d611545632d47dea0d126ce1d}\label{class_graph_a24ec7c1d611545632d47dea0d126ce1d}} 
+\index{Graph@{Graph}!maxCap@{maxCap}}
+\index{maxCap@{maxCap}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{maxCap()}{maxCap()}}
+{\footnotesize\ttfamily int Graph\+::max\+Cap (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+this function returns maximum capacity from a to b 
+\begin{DoxyParams}{Parameters}
+{\em a} & start node \\
+\hline
+{\em b} & end node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the maximum capacity possible going from a node to b node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a7a9780895287e2edb4e033fe24d45341}\label{class_graph_a7a9780895287e2edb4e033fe24d45341}} 
+\index{Graph@{Graph}!pareto@{pareto}}
+\index{pareto@{pareto}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{pareto()}{pareto()}}
+{\footnotesize\ttfamily int Graph\+::pareto (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+this functions returns maximum capacity regardim maximum amout of layovers 
+\begin{DoxyParams}{Parameters}
+{\em a} & start node \\
+\hline
+{\em b} & end node \\
+\hline
+{\em max} & maximum number of layovers it can reach \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the maximum capacity possible going from a node to b node regarding the maximum amount of layovers, passed onto the function through the \char`\"{}max\char`\"{} parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a456a8ddf60b359cf7b94e4bd2a41ab63}\label{class_graph_a456a8ddf60b359cf7b94e4bd2a41ab63}} 
+\index{Graph@{Graph}!path\_taken@{path\_taken}}
+\index{path\_taken@{path\_taken}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{path\_taken()}{path\_taken()}}
+{\footnotesize\ttfamily list$<$ int $>$ Graph\+::path\+\_\+taken (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+this function prints paths 
+\begin{DoxyParams}{Parameters}
+{\em a} & start node \\
+\hline
+{\em b} & end node \\
+\hline
+{\em max} & maximum number of layovers it can reach, default value is -\/1 which will mean the function to call is the 1.\+1 max\+Cap, else it calls pareto function from 1.\+2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the path taken to reach the maximum capacity possible from a node to b, if a \char`\"{}max\char`\"{} parameter is provided, such maximum capacity is calculated regarding a number of maximum layovers it can reach. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/franc/\+FEUP/\+LEIC/\+FEUP\+\_\+\+DA2/codigo/include/graph.\+h\end{DoxyCompactItemize}
