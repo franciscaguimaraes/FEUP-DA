@@ -7,7 +7,7 @@
 - Project Grade (30%): 17.76 / 20.00
 #
 #### Exam
-- Exam (70%): 0.00 / 20.00
+- Exam (70%): 12.84 / 20.00
 #
 
-## Final Grade: 5/20
+## Final Grade: 14/20
